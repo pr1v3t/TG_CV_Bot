@@ -43,7 +43,7 @@ def core2(message):
     elif message.text == 'Contacs':
         key = telebot.types.ReplyKeyboardMarkup(True, False)
         key.row('Main menu')
-        bot.send_message(message.chat.id, ' ☎️+7 (999) 999 99 99\n\n📱@pr1v3t\n\n📧 pr1v3t@protonmail.com\n\n📷 insta',
+        bot.send_message(message.chat.id, ' ☎️+phone \n\n📱tg nickname \n\n📧 email\n\n📷 insta',
                          reply_markup=key)
     elif message.text == 'About':
         key = telebot.types.ReplyKeyboardMarkup(True, False)
