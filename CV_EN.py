@@ -4,9 +4,9 @@
 import telebot
 from telebot import types
 
-API_TOKEN = 'your:token'
+API_TOKEN = 'your:token' #token by FatherBot. 
 
-bot = telebot.TeleBot(API_TOKEN)
+bot = telebot.TeleBot(API_TOKEN) #initialize token
 
 
 @bot.message_handler(commands=['start'])
@@ -21,13 +21,13 @@ def corebuttons(message):
     bot.send_message(message.chat.id, '⬇️Select a section below⬇️'.format(name=message.chat.first_name),
                      reply_markup=core)
 
-
+#creating action buttons 
 @bot.message_handler(content_types=['text'])
 def core2(message):
     if message.text == 'Main information':
         key = telebot.types.ReplyKeyboardMarkup(True, False)
         key.row('Main menu')
-        bot.send_message(message.chat.id, 'Info about you', reply_markup=key)
+        bot.send_message(message.chat.id, 'Info about you', reply_markup=key) 
     elif message.text == 'Skills':
         key = telebot.types.ReplyKeyboardMarkup(True, False)
         key.row('Main menu')
